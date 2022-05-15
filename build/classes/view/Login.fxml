@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="900.0" maxWidth="723.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="526.0" />
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="609.0" style="-fx-background-color: rgb(255, 255, 255); -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 3;">
+         <children>
+            <ImageView fitHeight="149.0" fitWidth="297.0" layoutX="166.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagem/IsPet.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtUsername" labelFloat="true" layoutX="166.0" layoutY="224.0" maxWidth="297.0" minWidth="226.0" prefHeight="31.0" prefWidth="297.0" promptText="Usuário">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="166.0" layoutY="275.0" maxWidth="297.0" minWidth="297.0" prefHeight="31.0" prefWidth="297.0" promptText="Senha">
+               <font>
+                  <Font name="SansSerif Regular" size="13.0" />
+               </font></JFXPasswordField>
+            <JFXButton fx:id="btnLogin" layoutX="269.0" layoutY="357.0" onAction="#login" prefHeight="37.0" prefWidth="91.0" style="-fx-background-color: #04B4AE;" styleClass="login" text="Entrar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Book" size="18.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="imgProgress" fitHeight="74.0" fitWidth="91.0" layoutX="278.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagem/tumblr_o0hav8YTDN1uzrrkro1_500.gif" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="8.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="12.0" style="-fx-background-color: #00718A;" />
+            <AnchorPane layoutX="31.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="12.0" style="-fx-background-color: #04B4AE;" />
+            <AnchorPane layoutX="52.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="12.0" style="-fx-background-color: #00718A;" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

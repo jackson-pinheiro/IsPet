@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1161.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXML_Compras_P_S_CadastrarController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="114.0" prefWidth="1195.0" style="-fx-background-radius: 5;">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="1206.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Imagem/290f96ec-3e35-4ca8-8965-2f887ffc530d.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="35.0" layoutY="27.0" prefHeight="47.0" prefWidth="182.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Compras" wrappingWidth="174.99998885393143">
+                     <font>
+                        <Font name="Century Gothic Bold" size="35.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anhchopane" layoutX="6.0" layoutY="174.0" prefHeight="436.0" prefWidth="1183.0">
+         <children>
+            <ComboBox fx:id="comboAddProdutoNome" layoutX="3.0" layoutY="29.0" onAction="#openProduto" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="inputCodigo" editable="false" layoutX="220.0" layoutY="29.0" prefHeight="25.0" prefWidth="70.0" />
+            <TextField fx:id="imputTotal" editable="false" layoutX="154.0" layoutY="402.0" prefHeight="33.0" prefWidth="149.0" style="-fx-pref-column-count: red;" styleClass="vendas_valor_total" text="0">
+               <font>
+                  <Font name="Tahoma Bold" size="18.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../../../../PET-31-05/src/CSS/custom.css" />
+                  <URL value="@../CSS/custom.css" />
+               </stylesheets>
+            </TextField>
+            <TextField fx:id="imputAddProdutoQuantidade" layoutX="547.0" layoutY="29.0" prefHeight="25.0" prefWidth="70.0" />
+            <JFXButton fx:id="btnAddProduto" layoutX="651.0" layoutY="29.0" onAction="#openAddProduto" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #00A65A;" text="Adicionar" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="16.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fill="WHITE" glyphName="MAIL_REPLY_ALL" layoutX="676.0" layoutY="-26.0" size="15" text="" />
+            <Text layoutX="3.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produto">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#363537" layoutX="223.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="imputAddProdutoValor" editable="false" layoutX="329.0" layoutY="29.0" prefHeight="25.0" prefWidth="100.0" />
+            <Text fill="GREEN" fontSmoothingType="LCD" layoutX="37.0" layoutY="429.0" stroke="#2f512f" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="0.0" text="Total R$:">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <VBox layoutX="948.0" layoutY="312.0" prefHeight="137.0" prefWidth="238.0">
+               <children>
+                  <GridPane prefHeight="97.0" prefWidth="190.0">
+                     <columnConstraints>
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXButton fx:id="btnCancelar" onAction="#openCancelar" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #EE2F26;" text="Cancelar" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Tahoma" size="16.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" />
+                           </GridPane.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="btnFinalizar" onAction="#openFinalizar" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #8AC926;" text="Finalizar" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma" size="16.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" />
+                           </GridPane.margin>
+                        </JFXButton>
+                        <MaterialDesignIconView fill="WHITE" glyphName="PRINTER" size="20">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="20.0" />
+                           </GridPane.margin>
+                        </MaterialDesignIconView>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <TableView fx:id="tableProdutos" layoutX="10.0" layoutY="85.0" prefHeight="315.0" prefWidth="893.0">
+               <columns>
+                  <TableColumn fx:id="clCodigo" prefWidth="74.0" text="Código" />
+                  <TableColumn fx:id="clProdutos" prefWidth="268.0" text="Produto " />
+                  <TableColumn fx:id="clprecoUnitario" prefWidth="130.0" text="Preço Unitário" />
+                  <TableColumn fx:id="clQuantidade" prefWidth="130.0" text="Quantidade" />
+                  <TableColumn fx:id="clPreco" prefWidth="130.0" text="R$ Preço Total" />
+               </columns>
+            </TableView>
+            <Text fill="#363537" layoutX="329.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#363537" layoutX="547.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade" wrappingWidth="87.9999965429306">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="btnRemover" layoutX="773.0" layoutY="29.0" onAction="#openRemove" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #C1292E;" text="Remover" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="16.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="217.0" layoutY="-58.0" orientation="VERTICAL" prefHeight="47.0" prefWidth="11.0" />
+            <Separator layoutY="-9.0" prefHeight="0.0" prefWidth="1200.0" />
+            <FontAwesomeIconView fill="WHITE" glyphName="REMOVE" layoutX="779.0" layoutY="47.0" size="14" />
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" layoutX="658.0" layoutY="48.0" size="14" text="" />
+            <Text layoutX="312.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R$:" />
+            <TextField fx:id="imputAddEstoque" editable="false" layoutX="449.0" layoutY="29.0" prefHeight="25.0" prefWidth="70.0" />
+            <Text fill="#363537" layoutX="449.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estoque">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnFornecedor" buttonType="RAISED" layoutX="14.0" layoutY="123.0" onAction="#openFornecedor" prefHeight="30.0" prefWidth="149.0" ripplerFill="#25b133" style="-fx-background-color: #00AD9A;" text="Fornecedor " textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtCodigoFor" editable="false" labelFloat="true" layoutX="243.0" layoutY="128.0" prefHeight="3.0" prefWidth="88.0" promptText="Código" />
+      <JFXTextField fx:id="txtNomeFor" editable="false" labelFloat="true" layoutX="366.0" layoutY="128.0" prefHeight="15.0" prefWidth="190.0" promptText="Fornecedor " />
+      <JFXTextField fx:id="txtCnpj" editable="false" labelFloat="true" layoutX="597.0" layoutY="128.0" prefHeight="20.0" prefWidth="149.0" promptText="CNPJ" />
+      <MaterialDesignIconView fill="WHITE" glyphName="TRUCK" layoutX="29.0" layoutY="147.0" size="18" />
+      <JFXButton fx:id="btnVoltar" buttonType="RAISED" layoutX="937.0" layoutY="114.0" onAction="#openVoltar" prefHeight="30.0" prefWidth="149.0" ripplerFill="#25b133" style="-fx-background-color: #C32720;" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="MAIL_REPLY_ALL" size="19" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

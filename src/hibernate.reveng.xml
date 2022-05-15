@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="pet"/>
+  <table-filter match-name="produtos_servicos"/>
+  <table-filter match-name="especies"/>
+  <table-filter match-name="estados"/>
+  <table-filter match-name="relatam_itens_vendas"/>
+  <table-filter match-name="unidades"/>
+  <table-filter match-name="vendas"/>
+  <table-filter match-name="clientes"/>
+  <table-filter match-name="tipo_acesso"/>
+  <table-filter match-name="compras"/>
+  <table-filter match-name="cores"/>
+  <table-filter match-name="relatam_itens_compras"/>
+  <table-filter match-name="animais"/>
+  <table-filter match-name="usuarios"/>
+  <table-filter match-name="cidades"/>
+  <table-filter match-name="endereco"/>
+  <table-filter match-name="fornecedores"/>
+  <table-filter match-name="racas"/>
+</hibernate-reverse-engineering>

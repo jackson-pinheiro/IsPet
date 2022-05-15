@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1166.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXML_Animal_P_S_AlterarController">
+   <children>
+      <AnchorPane prefHeight="710.0" prefWidth="980.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="10.0" prefHeight="122.0" prefWidth="1167.0">
+               <children>
+                  <ImageView fitHeight="122.0" fitWidth="1183.0" opacity="0.96" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Imagem/290f96ec-3e35-4ca8-8965-2f887ffc530d.jpg" />
+                     </image>
+                  </ImageView>
+                  <HBox layoutX="35.0" layoutY="27.0" prefHeight="46.0" prefWidth="503.0">
+                     <children>
+                        <Text fill="#fff4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Alterar Cadastro De Animal" textAlignment="CENTER" wrappingWidth="502.000005453825">
+                           <font>
+                              <Font name="Century Gothic Bold" size="35.0" />
+                           </font>
+                        </Text>
+                     </children></HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1.0" layoutY="183.0" prefHeight="468.0" prefWidth="963.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <TextField fx:id="inputNome" layoutX="124.0" layoutY="28.0" prefHeight="25.0" prefWidth="300.0" />
+                  <Text layoutX="482.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apelido:">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="inputApelido" layoutX="542.0" layoutY="27.0" prefWidth="150.0" />
+                  <Text layoutX="307.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento:">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="inputPeso" layoutX="124.0" layoutY="75.0" prefWidth="150.0" />
+                  <Text layoutX="308.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raça:">
+                     <font>
+                        <Font name="Microsoft Tai Le" size="15.0" />
+                     </font>
+                  </Text>
+                  <HBox layoutX="98.0" layoutY="319.0" prefHeight="58.0" prefWidth="560.0" spacing="6.0">
+                     <children>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <JFXButton fx:id="btnVoltar" buttonType="RAISED" onAction="#openVoltar" prefHeight="35.0" prefWidth="132.0" ripplerFill="#571313" style="-fx-background-color: #EE2F26;" styleClass="increment-arrow-button" stylesheets="@../../../../PET-31-05/src/CSS/custom.css" text="Voltar" textFill="WHITE" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Tahoma" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="MAIL_REPLY_ALL" size="20" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnSalvar" buttonType="RAISED" onAction="#opensalvar" prefHeight="35.0" prefWidth="134.0" ripplerFill="#3f25d7" style="-fx-background-color: #8AC926;" text="Salvar" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE_ALT" size="20" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <JFXDatePicker fx:id="ImputData" layoutX="444.0" layoutY="84.0" prefWidth="150.0" />
+                  <ComboBox fx:id="comboxCor" layoutX="124.0" layoutY="183.0" prefHeight="25.0" prefWidth="150.0" />
+                  <ComboBox fx:id="comboxRaça" layoutX="369.0" layoutY="132.0" onMouseClicked="#carregaRaça" prefHeight="25.0" prefWidth="150.0" />
+                  <TextArea fx:id="inputDescriçao" layoutX="124.0" layoutY="244.0" prefHeight="58.0" prefWidth="284.0" promptText="Digite a descrição do animal" />
+                  <ComboBox fx:id="comboxEspecie" layoutX="124.0" layoutY="132.0" prefWidth="150.0" />
+                  <Text layoutX="308.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo:" wrappingWidth="40.77392402291298">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Text>
+                  <VBox layoutX="16.0" layoutY="12.0" prefHeight="277.0" prefWidth="108.0">
+                     <children>
+                        <GridPane prefHeight="262.0" prefWidth="110.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" GridPane.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Peso:" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Espécie:" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cor:" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <RadioButton fx:id="inputMacho" layoutX="379.0" layoutY="187.0" mnemonicParsing="false" text="Macho">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="sexo" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="InputFemea" layoutX="454.0" layoutY="187.0" mnemonicParsing="false" text="Fêmea" toggleGroup="$sexo">
+                     <font>
+                        <Font size="13.0" />
+                     </font></RadioButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="125.0" prefHeight="73.0" prefWidth="1167.0">
+               <children>
+                  <JFXButton fx:id="btnPropeitario" buttonType="RAISED" layoutX="14.0" layoutY="19.0" onAction="#openPropietario" prefHeight="35.0" prefWidth="149.0" ripplerFill="#25b133" style="-fx-background-color: #00AD9A;" text="Proprietário" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_MULTIPLE_PLUS" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtCodigo" editable="false" labelFloat="true" layoutX="220.0" layoutY="17.0" prefHeight="25.0" prefWidth="111.0" promptText="Código" />
+                  <JFXTextField fx:id="txtNomeDono" editable="false" labelFloat="true" layoutX="376.0" layoutY="17.0" prefHeight="25.0" prefWidth="200.0" promptText="Nome do dono" />
+                  <JFXTextField fx:id="txtCpfCnpj" editable="false" labelFloat="true" layoutX="665.0" layoutY="17.0" prefHeight="25.0" prefWidth="200.0" promptText="CPF/CNPJ" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

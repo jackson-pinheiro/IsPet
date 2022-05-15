@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXML_Usuario_P_S_VisualizarController">
+   <children>
+      <JFXButton fx:id="btnVoltar" buttonType="RAISED" layoutX="30.0" layoutY="651.0" onAction="#openVoltar" prefHeight="35.0" prefWidth="132.0" ripplerFill="#4d1f0f" style="-fx-background-color: #C1292E;" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="MAIL_REPLY_ALL" size="20" />
+         </graphic>
+      </JFXButton>
+      <AnchorPane prefHeight="122.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="136.0" fitWidth="1200.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Imagem/USUARIOS.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="35.0" layoutY="27.0" prefHeight="43.0" prefWidth="188.0" style="-fx-background-color: white;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Usuários" textAlignment="CENTER" wrappingWidth="167.98373413085938">
+                     <font>
+                        <Font name="Century Gothic" size="35.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="30.0" layoutY="159.0" prefHeight="475.0" prefWidth="965.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="365.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="330.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXTextField fx:id="txtNome" editable="false" labelFloat="true" promptText="Nome Completo" GridPane.rowIndex="1">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCPF" editable="false" labelFloat="true" promptText="CPF" GridPane.rowIndex="2">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtRG" editable="false" labelFloat="true" promptText="RG" GridPane.rowIndex="3">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtSexo" editable="false" labelFloat="true" promptText="Sexo" GridPane.rowIndex="4">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtUsuario" editable="false" labelFloat="true" promptText="Usuário" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Text fill="#4d4d4d" strokeType="OUTSIDE" strokeWidth="0.0" text="Acesso" textAlignment="CENTER" wrappingWidth="330.9837341308594" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Tahoma" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="#4d4d4d" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" textAlignment="CENTER" wrappingWidth="328.9837341308594">
+               <font>
+                  <Font name="Tahoma" size="30.0" />
+               </font>
+            </Text>
+            <JFXPasswordField fx:id="txtSenha" editable="false" labelFloat="true" promptText="Senha" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font></JFXPasswordField>
+            <JFXPasswordField fx:id="txtRSenha" editable="false" labelFloat="true" promptText="Repetir Senha" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font></JFXPasswordField>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

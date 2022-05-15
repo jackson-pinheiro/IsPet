@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="1300.0" stylesheets="@../CSS/custom.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <VBox prefHeight="720.0" prefWidth="1300.0">
+         <children>
+            <JFXToolbar fx:id="toolBar" prefHeight="60.0" prefWidth="1228.0" style="-fx-background-color: #3A506B;">
+               <right>
+                  <HBox fx:id="toolBarRight" prefHeight="44.0" prefWidth="109.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btnLogOut" onAction="#logOff" prefHeight="52.0" prefWidth="163.0" ripplerFill="#f5f4f4" style="-fx-alignment: left;" text="Log out" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic" size="13.0" />
+                           </font>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="LOGOUT" size="16.0" wrappingWidth="36.0" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </right>
+               <left>
+                  <ImageView fitHeight="47.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../Imagem/IsPet.png" />
+                     </image>
+                     <rotationAxis>
+                        <Point3D />
+                     </rotationAxis>
+                  </ImageView>
+               </left>
+               <center>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="  IsPet - Controle e Gerenciamento de PetShops - Versão 1.0 BETA" wrappingWidth="442.13671875" BorderPane.alignment="CENTER" />
+               </center>
+            </JFXToolbar>
+            <HBox prefHeight="738.0" prefWidth="1294.0">
+               <children>
+                  <AnchorPane fx:id="sideAnchor" prefHeight="737.0" prefWidth="202.0" style="-fx-background-color: #053765;" styleClass="side-bar">
+                     <children>
+                        <GridPane layoutX="3.0" layoutY="2.0" prefHeight="584.0" prefWidth="189.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints fillHeight="false" minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="211.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="193.0" minHeight="0.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="193.0" minHeight="0.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXButton fx:id="btnAnimal" onAction="#openAnimal" prefHeight="50.0" prefWidth="202.0" ripplerFill="#d6b2b2" styleClass="side-buttons" stylesheets="@../CSS/custom.css" text="Animal" textFill="WHITE" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PAW" size="22" wrappingWidth="40.0" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnProdutos" onAction="#openProdutos" prefHeight="50.0" prefWidth="202.0" styleClass="side-buttons" stylesheets="@../CSS/custom.css" text="Produto" textFill="WHITE" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_BASKET" size="22" wrappingWidth="40.0" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnFornecedores" onAction="#openFornecedores" prefHeight="50.0" prefWidth="202.0" styleClass="side-buttons" stylesheets="@../CSS/custom.css" text="Fornecedores" textFill="WHITE" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="TRUCK" size="22" text="" wrappingWidth="40.0" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnClose" onAction="#exit" prefHeight="50.0" prefWidth="202.0" styleClass="side-buttons" stylesheets="@../CSS/custom.css" text="Exit" textFill="WHITE" GridPane.rowIndex="10">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="22" wrappingWidth="40.0" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnCliente" layoutX="10.0" layoutY="157.0" onAction="#openCliente" prefHeight="50.0" prefWidth="202.0" styleClass="side-buttons" stylesheets="@../CSS/custom.css" text="Clientes" textFill="WHITE" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USER" size="22" wrappingWidth="40.0" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton id="btvendas" fx:id="btnVendas" layoutX="10.0" layoutY="157.0" onAction="#openVendas" prefHeight="50.0" prefWidth="202.0" styleClass="side-buttons" stylesheets="@../CSS/custom.css" text="Vendas" textFill="WHITE" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnHome3" layoutX="10.0" layoutY="157.0" onAction="#openHome" prefHeight="50.0" prefWidth="202.0" styleClass="side-buttons" stylesheets="@../CSS/custom.css" text="Home" textFill="WHITE" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="22" wrappingWidth="40.0" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <ImageView disable="true" fitHeight="30.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../Imagem/icons8-finalizar-pedido-32%20(1).png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <JFXButton fx:id="btnUsuario" onAction="#openUsuario" prefHeight="50.0" prefWidth="202.0" styleClass="side-buttons" stylesheets="@../CSS/custom.css" text="Usuário" textFill="WHITE" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="USER" size="22" wrappingWidth="40.0" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <AnchorPane prefHeight="125.0" prefWidth="195.0" style="-fx-background-color: #3A506B; -fx-background-radius: 5;">
+                                 <children>
+                                    <ImageView fx:id="imagemMasculina" fitHeight="50.0" fitWidth="69.0" layoutX="9.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Imagem/icons8-usuário-48.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="txt_usuario" fill="WHITE" layoutX="70.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="125.0">
+                                       <font>
+                                          <Font name="BigJohn" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" layoutX="9.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem Vindo" textAlignment="CENTER" wrappingWidth="185.13671875">
+                                       <font>
+                                          <Font name="Tahoma Bold" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="txt_Funçao" fill="WHITE" layoutX="9.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="185.13672351837158">
+                                       <font>
+                                          <Font name="Lucida Sans Regular" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="imagenFemina" fitHeight="50.0" fitWidth="69.0" layoutX="9.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Imagem/icons8-pessoa-do-sexo-feminino-48.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Icons525View fill="WHITE" glyphName="CIRCLE_THINLINE" layoutX="7.0" layoutY="82.0" size="55" />
+                                 </children></AnchorPane>
+                              <JFXButton fx:id="btnCompras" onAction="#openCompras" prefHeight="50.0" prefWidth="202.0" styleClass="side-buttons" stylesheets="@../CSS/custom.css" text="Compras" textFill="WHITE" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Century Gothic" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CART_PLUS" size="22" wrappingWidth="40.0" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="holderPane" prefHeight="737.0" prefWidth="1105.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
